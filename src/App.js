@@ -1,10 +1,16 @@
 import React from 'react';
+import PageHeader from './components/PageHeader';
+import Search from './components/Search';
+import Table from './components/Table';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-
+    <div>
+      <PageHeader />
+      <Search />
+      <Table />
     </div>
   );
 }
