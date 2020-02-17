@@ -1,4 +1,6 @@
 import React from 'react';
+import SortIcon from '../SortIcon';
+
 
 export default function TableHeader(props) {
 
@@ -6,7 +8,9 @@ export default function TableHeader(props) {
     <thead>
       <tr>
         <th scope="col-md-1">Photo</th>
-        <th scope="col-md-3">Name</th>
+        <th scope="col-md-3">Name
+        <SortIcon />
+        </th>
         <th scope="col-md-3">Phone</th>
         <th scope="col-md-3">Email</th>
         <th scope="col-md-2">DOB</th>

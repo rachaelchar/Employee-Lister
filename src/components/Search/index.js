@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import RandomUser from '../../utils/RandomUser';
 import Table from "../Table";
 
+
 export default function Search(props) {
   // Populate the table with a list of 20 employees when the page loads/Keeps the array of employees you had before modifying the search so you don't lose employees
   const [employees, setEmployees] = useState([]);
@@ -22,6 +23,7 @@ export default function Search(props) {
 
   }
 
+  // Modify the dob to be a more readable format
   const formatDate = (dob) => {
     dob = dob.split("T")[0];
     dob = dob.split("-");
@@ -36,7 +38,6 @@ export default function Search(props) {
 
     RandomUser.getAllEmployees()
       .then((res) => {
-        // console.log(res.data.results);
         let employeesArray = [];
 
         res.data.results.forEach(employee => {
