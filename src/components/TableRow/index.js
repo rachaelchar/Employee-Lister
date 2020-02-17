@@ -1,16 +1,20 @@
 import React from 'react';
 
-export default function TableRow() {
+export default function TableRow(props) {
 
   return(
-    <tr>
+    <tr
+    key={props.key}
+    >
       <td>
-        <img src="" alt="employee" />
+        <img 
+        src={props.picture} 
+        alt={props.name} />
       </td>
-      <td>First Last</td>
-      <td>555-5555</td>
-      <td>employee@email.com</td>
-      <td>01/01/1985</td>
+      <td>{props.name}</td>
+      <td>{props.phone}</td>
+      <td>{props.email}</td>
+      <td>{props.dob}</td>
     </tr>
   );
 }
