@@ -34,13 +34,30 @@ export default function Search() {
     return `${month}/${day}/${year}`;
   }
 
+  // Since the employees array is full of objects, create compare use a compare function for just names
+  const compare = (a, b) => {
+    const nameA = a.name;
+    const nameB = b.name;
+  
+    let comparison = 0;
+    if (nameA > nameB) {
+      comparison = 1;
+    } else if (nameA < nameB) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+  
+
+
+  let sortedEmployees = [...employees]
   // Click handler for sort icon
   const clickSortIcon = (event) => {
-    event.preventDefault();
-    console.log("icon was clicked");
+    // event.preventDefault();
+    // console.log("icon was clicked");
 
-    // let sortedEmployees = [...employees]
-    // sortedEmployees = employees.sort();
+    sortedEmployees = employees.sort(compare);
+    console.log("sorted employees", sortedEmployees);
     // setEmployeeList(sortedEmployees);
   }
   
