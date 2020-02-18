@@ -4,6 +4,7 @@ This application can be used to view basic employee information in an easy-to-re
 ## User Story
 As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
 
+
 ## Features 
 ### Instant Search
 As you type in the name of an employee in the search field, results are filtered as you type.
@@ -21,8 +22,7 @@ Results sorted by name alphabetically:
 ![Sorted Results](public/images/az_sort.png)
 
 
-
-### Built With
+### Built With:
 - React
 - Bootstrap
 - RandomUser API
