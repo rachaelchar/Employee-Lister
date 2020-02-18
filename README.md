@@ -8,9 +8,7 @@ As a user, I want to be able to view my entire employee directory at once so tha
 ### Instant Search
 As you type in the name of an employee in the search field, results are filtered as you type.
 
-![Instant Search](public/images/intial_results.png)
-
-
+![Instant Search](public/images/instant_search.gif)
 
 
 ### Sort by Name
