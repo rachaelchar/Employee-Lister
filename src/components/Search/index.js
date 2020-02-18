@@ -34,6 +34,18 @@ export default function Search(props) {
     return `${month}/${day}/${year}`;
   }
 
+  // Click handler for sort icon
+  const clickSortIcon = (event) => {
+    event.preventDefaul();
+    console.log("icon was clicked");
+
+    // let sortedEmployees = [...employees]
+    // sortedEmployees = employees.sort();
+    // setEmployeeList(sortedEmployees);
+  }
+  
+
+
   useEffect(() => {
 
     RandomUser.getAllEmployees()

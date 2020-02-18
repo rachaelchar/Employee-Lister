@@ -6,6 +6,7 @@ export default function SortIcon(props) {
   return(
     <SortByAlphaIcon
     className="float-right"
+    onClick={props.clickSortIcon}
     />
   );
 }
