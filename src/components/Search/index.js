@@ -8,6 +8,7 @@ export default function Search() {
   const [employees, setEmployees] = useState([]);
   // Used to make copies of original list when modified
   const [employeeList, setEmployeeList] = useState([]);
+  const [sortState, setSortState] = useState(false);
   
   const handleInputChange = (event) => {
     console.log(event.target.value);
@@ -35,7 +36,21 @@ export default function Search() {
   }
 
   // Since the employees array is full of objects, use a compare function for sorting by just names
-  const compare = (a, b) => {
+  // Sort A-Z
+  const compareAZ = (a, b) => {
+    const nameA = a.name;
+    const nameB = b.name;
+  
+    let comparison = 0;
+    if (nameA > nameB) {
+      comparison = 1;
+    } else if (nameA < nameB) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+  // Sort Z-A
+  const compareZA = (b, a) => {
     const nameA = a.name;
     const nameB = b.name;
   
@@ -49,16 +64,24 @@ export default function Search() {
   }
   
 
-
   // Click handler for sort icon
   const clickSortIcon = (event) => {
-    // event.preventDefault();
-    // console.log("icon was clicked");
+    // if statement allows user to click sort icon to toggle between A-Z & Z-A sort
+    if (!sortState){
+      // Make a copy of our current employee array to perform sort method on
+      const sortedEmployees = [...employees].sort(compareAZ);
+      console.log("sorted employees:", sortedEmployees);
 
-    const sortedEmployees = [...employees].sort(compare);
-    console.log("sorted employees:", sortedEmployees);
+      setEmployeeList(sortedEmployees);
+      setSortState(true);
+    } else if (sortState){
+      const sortedEmployees = [...employees].sort(compareZA);
+      console.log("sorted employees:", sortedEmployees);
 
-    setEmployeeList(sortedEmployees);
+      setEmployeeList(sortedEmployees);
+      setSortState(false);  
+    }
+    
   }
   
 
