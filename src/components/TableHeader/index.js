@@ -10,7 +10,7 @@ export default function TableHeader(props) {
         <th scope="col-md-1">Photo</th>
         <th scope="col-md-3">Name
         <SortIcon 
-        // onClick={props.clickSortIcon}
+        clickSortIcon={props.clickSortIcon}
         />
         </th>
         <th scope="col-md-3">Phone</th>

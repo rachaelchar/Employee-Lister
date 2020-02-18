@@ -3,7 +3,7 @@ import RandomUser from '../../utils/RandomUser';
 import Table from "../Table";
 
 
-export default function Search(props) {
+export default function Search() {
   // Populate the table with a list of 20 employees when the page loads/Keeps the array of employees you had before modifying the search so you don't lose employees
   const [employees, setEmployees] = useState([]);
   // Used to make copies of original list when modified
@@ -36,7 +36,7 @@ export default function Search(props) {
 
   // Click handler for sort icon
   const clickSortIcon = (event) => {
-    event.preventDefaul();
+    event.preventDefault();
     console.log("icon was clicked");
 
     // let sortedEmployees = [...employees]
@@ -90,7 +90,8 @@ export default function Search(props) {
         </form>
       </div>
     <Table 
-    employees={employeeList}
+    employees={employeeList} 
+    clickSortIcon={clickSortIcon}
     />
     </div>
   );
