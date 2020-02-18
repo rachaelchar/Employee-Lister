@@ -1,6 +1,9 @@
 # Employee Directory
 This application can be used to view basic employee information in an easy-to-read table format.
 
+## Project Link
+[Employee Directory](http://rachaelchar.github.io/Employee-Lister/)
+
 ## User Story
 As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
 
