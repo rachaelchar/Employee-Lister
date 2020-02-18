@@ -2,14 +2,14 @@ import React from 'react';
 
 export default function TableRow(props) {
 
-  return(
+  return (
     <tr
-    key={props.key}
+      key={props.key}
     >
       <td>
-        <img 
-        src={props.picture} 
-        alt={props.name} />
+        <img
+          src={props.picture}
+          alt={props.name} />
       </td>
       <td>{props.name}</td>
       <td>{props.phone}</td>

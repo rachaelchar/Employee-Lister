@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import RandomUser from '../../utils/RandomUser';
 import Table from "../Table";
+import './style.css';
 
 
 export default function Search() {
@@ -21,7 +22,6 @@ export default function Search() {
     })
 
     setEmployeeList(searchedEmployee);
-
   }
 
   // Modify the dob to be a more readable format
@@ -81,10 +81,8 @@ export default function Search() {
       setEmployeeList(sortedEmployees);
       setSortState(false);  
     }
-    
   }
   
-
 
   useEffect(() => {
 
@@ -119,12 +117,12 @@ export default function Search() {
 
   return (
     <div className="container p-4">
-      <div className="col-md-4 offset-4">
-        <form>
+      <div className="form-div">
+        <form className="mt-4">
           <input
           onChange={handleInputChange}
           ></input>
-          <button>
+          <button className="btn btn-outline-secondary">
             Search
             </button>
         </form>

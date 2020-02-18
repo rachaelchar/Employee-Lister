@@ -1,11 +1,14 @@
 import React from 'react';
+import './style.css';
 
 export default function PageHeader() {
   return (
     <div>
-      <nav className="navbar navbar-dark bg-dark">
-        <span className="navbar-brand mb-0 h1">Employee Lister</span>
-      </nav>
+      <div className="row">
+        <div className="page-header text-center text-light bg-dark">
+          <h1 className="align-middle">Employee Directory</h1>
+        </div>
+      </div>
     </div>
   );
 }

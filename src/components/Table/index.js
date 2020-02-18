@@ -2,8 +2,6 @@ import React from 'react';
 import TableHeader from '../TableHeader';
 import TableRow from '../TableRow';
 
-// This component includes TableHeader and TableRows components, so only Table will be included in App.js
-
 export default function Table(props) {
 
   return (
